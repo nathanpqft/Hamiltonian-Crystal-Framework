@@ -1,0 +1,54 @@
+\section{Illustrative Oscillation Spectrum}
+
+To visualize the impact of the spectral-gap correction, we compare the standard oscillation probability with the modified phase including the additional energy-dependent term.
+
+\begin{figure}[h]
+\centering
+
+\begin{tikzpicture}
+
+\begin{axis}[
+width=12cm,
+height=8cm,
+xlabel={Neutrino Energy $E$ (GeV)},
+ylabel={$P(\nu_\mu \rightarrow \nu_e)$},
+xmin=0.5,
+xmax=5,
+ymin=0,
+ymax=1,
+legend pos=north east,
+grid=both
+]
+
+% Standard oscillation curve
+\addplot[
+blue,
+thick,
+samples=200,
+domain=0.5:5
+]
+{sin(deg(1.27*2.5e-3*1300/x))^2};
+
+\addlegendentry{Standard Oscillation}
+
+% Modified oscillation curve
+\addplot[
+red,
+thick,
+dashed,
+samples=200,
+domain=0.5:5
+]
+{sin(deg(1.27*2.5e-3*1300/x + 0.0005*x^3))^2};
+
+\addlegendentry{With Spectral-Gap Correction}
+
+\end{axis}
+
+\end{tikzpicture}
+
+\caption{
+Example oscillation probability for a 1300 km baseline, illustrating how a small spectral-gap correction introduces an energy-dependent phase shift. The deviation grows at higher energies due to the $E^3$ scaling of the correction term.
+}
+
+\end{figure}
