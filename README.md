@@ -1,4 +1,4 @@
-Copyright (c) 2026 [Nathan Weber]
+Copyright (c) 2026 Nathan Weber
 All rights reserved.
 
 This work is made publicly available as a timestamped record of authorship.
@@ -7,7 +7,7 @@ You may view, download, and discuss the contents for educational and research pu
 you may not reproduce, modify, distribute, or claim authorship of this work without explicit
 permission from the original author.
 
-For inquiries or requests, contact: [nathanpqft@gmail.com]
+For inquiries or requests, contact: nathanpqft@gmail.com
 
 
 # Hamiltonian-Crystal-Framework
