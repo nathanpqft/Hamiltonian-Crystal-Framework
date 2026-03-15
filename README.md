@@ -15,7 +15,7 @@ The Hamiltonian Crystal: Emergent Vacuum, Dark-Sector and Time Crystalline Dynam
 
 # Hamiltonian Crystal Framework
 
-**Author:** [Nathan Weber]  
+**Author:** Nathan Weber  
 **Date:** March 2026  
 **Status:** Draft / Public Record  
 
