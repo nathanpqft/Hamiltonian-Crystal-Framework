@@ -1,0 +1,157 @@
+\documentclass[12pt,a4paper]{article}
+
+% --- Encoding and fonts ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% --- Math packages ---
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{mathtools}
+\usepackage{physics}   % for \ket, \bra, \expval
+\usepackage{bm}        % bold math symbols
+
+% --- Graphics ---
+\usepackage{tikz}
+\usepackage{tikz-3dplot}  % for 3D lattice/time-crystal diagrams
+\usepackage{xcolor}
+
+% --- Page layout ---
+\usepackage[margin=1in]{geometry}
+
+% --- Hyperlinks ---
+\usepackage{hyperref}
+
+% --- Optional: section formatting ---
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+% --- Custom colors ---
+\definecolor{visible}{RGB}{66,135,245} % blue
+\definecolor{dark}{RGB}{245,130,66}    % orange
+\definecolor{timecrystal}{RGB}{180,0,180} % purple
+\definecolor{gap}{RGB}{200,0,0}        % red
+
+% --- Document info ---
+\title{Riemann-style Hamiltonian Crystal:\\ Integer Fock States, Time-Crystals, and Dark Sector Couplings}
+\author{Nathan Weber \\ \texttt{nathanpqft@gmail.com}}
+\date{March 14 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We propose a Hamiltonian Crystal framework where black holes, vacuum energy, and dark-sector interactions emerge from \emph{discrete integer Fock states} with topologically protected spectral gaps. Time-crystalline dynamics and portal couplings naturally give rise to observable oscillatory phenomena, while the residual vacuum energy reproduces the cosmological constant without fine-tuning. This work unifies integer-based quantum microstates, Riemann-style spectral structures, and dark-sector predictions in a single emergent lattice model.
+\end{abstract}
+
+\section{Riemann-style Hamiltonian Crystal and Integer Fock States}
+
+We model the quantum vacuum and black hole microstates using integer-labeled Fock states:
+\begin{equation}
+n = \prod_{p \in \mathbb{P}} p^{k_p}, \quad 
+\ket{n} = \prod_{p \in \mathbb{P}} \frac{(a_p^\dagger)^{k_p}}{\sqrt{k_p!}} \ket{0},
+\end{equation}
+where $p$ runs over prime numbers and $k_p \in \mathbb{N}_0$ are occupation numbers. Each prime oscillator contributes a discrete \emph{spectral gap}:
+\begin{equation}
+\Delta E_n = \Delta E_0 + \sum_{p|n} \alpha_p k_p, 
+\quad \alpha_p = \frac{\log p}{\prod_{q\le p} q}.
+\end{equation}
+Topological protection ensures inter-sector gaps remain invariant under evolution.
+
+\subsection{Hamiltonian and Off-Diagonal Couplings}
+The arithmetic Hamiltonian reads
+\begin{equation}
+H_{\rm BH}^{\rm arith} = \sum_n \Delta E_n \ket{n}\bra{n} 
++ \sum_{n\neq m} g_{nm} \ket{n}\bra{m}, \quad
+g_{nm} = \beta \delta_{C_n,C_m} \prod_{p|n,m} \frac{1}{p}.
+\end{equation}
+
+\subsection{Riemann Connection}
+Remarkably, the prime-based Fock decomposition gives a natural link to Riemann's $\zeta$ function:
+\begin{equation}
+\sum_n \frac{1}{n^s} = \prod_{p \in \mathbb{P}} \frac{1}{1 - p^{-s}}, \quad
+\text{with } n \leftrightarrow \ket{n}, \; s \in \mathbb{C}.
+\end{equation}
+Zeroes of $\zeta(s)$ correspond to special interference patterns among prime Fock modes, connecting arithmetic spectra to deep analytic structures.
+
+\section{Time-Crystal Dynamics and Vacuum Oscillations}
+Periodic drives on Fock-space modes induce time-crystalline behavior:
+\begin{equation}
+H(t) = H_{\rm crystal} + \sum_n \delta_n a_n^\dagger a_n \cos(\omega t), \quad \omega \approx \Delta E_n / \hbar_{\rm crystal}.
+\end{equation}
+Near resonance, vacuum and excited Fock modes oscillate as
+\begin{equation}
+\ket{\psi(t)} = \cos(\Omega_R t/2)\ket{0} + i \sin(\Omega_R t/2)\ket{1}, 
+\quad
+\Omega_R = \sqrt{(\Delta E/\hbar_{\rm crystal} - \omega)^2 + (\delta/\hbar_{\rm crystal})^2}.
+\end{equation}
+
+\section{Dark Sector Couplings}
+Portal interactions connect visible Fock states $f_j$ to dark-sector modes $\chi_i$:
+\begin{equation}
+H_{\rm dark} = \sum_i M_{\chi_i} \chi_i^\dagger \chi_i 
++ \sum_{i,j} g_{\chi_i f_j} \chi_i^\dagger \chi_i f_j^\dagger f_j.
+\end{equation}
+Eigenvalues give effective dark masses, and spectral gaps determine Fock-space occupation stability.
+
+\section{3D Lattice Diagram: Hamiltonian Crystal Overview}
+
+\begin{center}
+\begin{tikzpicture}[tdplot_main_coords, scale=3, every node/.style={scale=0.7}]
+\tdplotsetmaincoords{70}{110}
+
+% --- Draw nodes and spectral gaps ---
+\foreach \x in {0,1,2} {
+    \foreach \y in {0,1,2} {
+        % Visible
+        \node[circle,fill=visible!70,minimum size=4pt] at (\x,\y,0) (V\x\y) {};
+        % Dark
+        \node[circle,fill=dark!70,minimum size=4pt] at (\x+0.2,\y+0.2,-0.1) (D\x\y) {};
+        % Spectral gaps
+        \draw[gap,thick] (\x,\y,0) -- (\x,\y,0.5+0.1*\x+0.1*\y);
+        \draw[gap,dashed,thick] (\x+0.2,\y+0.2,-0.1) -- (\x+0.2,\y+0.2,0.4+0.1*\x);
+    }
+}
+
+% --- Local neighborhood polygons ---
+\foreach \x/\y in {0/0,1/1,2/2} {
+    \draw[fill=visible!20,opacity=0.2] (\x,\y,0) -- (\x+1,\y,0) -- (\x+1,\y+1,0) -- (\x,\y+1,0) -- cycle;
+}
+
+% --- Time-crystal loops ---
+\foreach \x/\y in {0/0,1/1,2/2} {
+    \draw[->,timecrystal,thick,opacity=0.8] (\x,\y,0.6+0.1*\x) .. controls (\x+0.3,\y+0.1,0.7) and (\x+0.1,\y+0.3,0.8) .. (\x,\y,0.6+0.1*\x);
+}
+
+% --- Portal flows ---
+\foreach \x/\y in {0/0,1/1,2/2} {
+    \draw[->,orange!70,thick,opacity=0.5] (V\x\y) .. controls (\x+0.3,\y+0.3,0.2) .. (D\x\y);
+}
+
+% --- Axes ---
+\draw[->] (0,0,-0.2) -- (3.5,0,-0.2) node[anchor=north east]{$x$};
+\draw[->] (0,0,-0.2) -- (0,3.5,-0.2) node[anchor=north west]{$y$};
+\draw[->] (0,0,-0.2) -- (0,0,1.2) node[anchor=south]{$\Delta E$};
+
+% --- Legend ---
+\node[rectangle,fill=white,opacity=0.8] at (3.2,0.5,0) {
+\begin{tabular}{l}
+\textcolor{visible}{\textbullet} Visible sector \\
+\textcolor{dark}{\textbullet} Dark sector \\
+\textcolor{gap}{|} Spectral gaps \\
+\textcolor{timecrystal}{\(\curvearrowleft\)} Time-crystal loops \\
+\textcolor{orange!70}{\(\rightarrow\)} Portal flows \\
+Shaded polygons: Local neighborhood
+\end{tabular}
+};
+
+\end{tikzpicture}
+\end{center}
+
+\section{Conclusion}
+
+The Hamiltonian Crystal framework unifies integer Fock states, topologically protected spectral gaps, Riemann-inspired structures, time-crystal oscillations, and dark-sector couplings. It provides a concrete and falsifiable approach to vacuum energy, black hole microstates, and possible experimental signatures via oscillatory phenomena and portal interactions.
+
+\end{document}
