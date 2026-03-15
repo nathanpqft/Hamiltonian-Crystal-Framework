@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Neutron Lifetime Anomalies and Dark-Sector Oscillations in the Hamiltonian Crystal Framework}
+\author{Nathan Weber}
+\date{March 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We explore the neutron lifetime puzzle within the Hamiltonian Crystal framework, proposing that neutrons oscillate into dark-sector partners via Fock-space portal couplings. This framework predicts observable consequences: reduced proton counts in beam experiments, time-dependent modulations in neutron survival probability, and correlations with other dark-sector oscillations. The model provides concrete, falsifiable predictions and a pathway to experimentally constrain portal couplings and spectral gaps associated with dark-sector particles.
+\end{abstract}
+
+\section{Introduction}
+The longstanding discrepancy between bottle and beam measurements of the neutron lifetime (\(\tau_n\)) suggests the presence of physics beyond the Standard Model. In the Hamiltonian Crystal framework, the vacuum and matter fields are organized into a discrete lattice of Fock-space modes with inherent spectral gaps (\(\Delta E_{\rm vac}\)), allowing coherent oscillations between Standard Model particles and dark-sector partners. Neutron oscillations into a dark neutron \(n_\chi\) can naturally explain the observed lifetime differences.
+
+\section{Neutron-Dark Sector Coupling}
+The effective Hamiltonian for neutron-dark-sector mixing is
+\begin{equation}
+H = 
+\begin{pmatrix}
+m_n & g_{n\chi} \\
+g_{n\chi} & m_\chi
+\end{pmatrix},
+\end{equation}
+where \(g_{n\chi}\) is the portal coupling and \(\Delta E = m_n - m_\chi\) is the mass splitting. Diagonalization gives eigenstates \(|n_\pm\rangle\) with energies
+\begin{equation}
+E_\pm = \frac{m_n + m_\chi}{2} \pm \frac{\sqrt{\Delta E^2 + 4 g_{n\chi}^2}}{2}.
+\end{equation}
+
+\section{Predictions}
+
+\subsection{Reduced Proton Counts in Beam Experiments}
+Neutrons that oscillate to dark-sector states evade detection, leading to an effective proton detection rate:
+\begin{equation}
+R_p = R_0 \left( 1 - \langle P_{n \to n_\chi} \rangle \right),
+\end{equation}
+where \(R_0\) is the Standard Model decay rate and
+\begin{equation}
+\langle P_{n \to n_\chi} \rangle = \frac{2 g_{n\chi}^2}{\Delta E^2 + 4 g_{n\chi}^2}.
+\end{equation}
+
+\subsection{Time-Dependent Modulations of Neutron Survival Probability}
+The survival probability of neutrons in traps is
+\begin{equation}
+P_{\rm surv}(t) = 1 - \frac{4 g_{n\chi}^2}{\Delta E^2 + 4 g_{n\chi}^2} 
+\sin^2 \left( \frac{\sqrt{\Delta E^2 + 4 g_{n\chi}^2}}{2 \hbar} t \right) e^{-\Gamma t},
+\end{equation}
+with \(\Gamma = 1/\tau_{\rm SM}\). Fourier analysis of neutron decay times could reveal the oscillation frequency
+\begin{equation}
+\omega = \frac{\sqrt{\Delta E^2 + 4 g_{n\chi}^2}}{\hbar},
+\end{equation}
+providing a direct measurement of \(g_{n\chi}\).
+
+\subsection{Correlations with Other Dark-Sector Oscillations}
+Other Standard Model particles, particularly neutrinos, may oscillate into dark-sector states via similar portal couplings:
+\begin{equation}
+\langle P_{i \to i_\chi} \rangle \sim \frac{2 g_{i\chi}^2}{\Delta E_i^2 + 4 g_{i\chi}^2}, \quad i = n, \nu, \ldots
+\end{equation}
+Synchronous deviations across different experiments could confirm the Hamiltonian Crystal's multi-modal structure.
+
+\section{Experimental Implications}
+\begin{itemize}
+    \item \textbf{Beam experiments:} Measure proton deficits and time-of-flight dependence to detect oscillatory patterns.
+    \item \textbf{Ultracold neutron traps:} High-precision decay curves to detect Fourier components of oscillations.
+    \item \textbf{Correlated searches:} Compare neutrino oscillation data with neutron lifetime anomalies for synchronous deviations.
+\end{itemize}
+
+
+\section{Conclusion}
+The Hamiltonian Crystal provides a unified framework explaining the neutron lifetime anomaly via dark-sector oscillations. The model yields quantitative, falsifiable predictions for beam experiments, ultracold neutron traps, and cross-experimental correlations with neutrinos and other weakly interacting particles. Observation of the predicted modulations and correlations would provide strong evidence for the Hamiltonian Crystal structure and portal-mediated dark-sector physics.
+
+\end{document}
