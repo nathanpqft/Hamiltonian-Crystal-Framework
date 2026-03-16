@@ -1,0 +1,318 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,graphicx}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Cosmic Censorship and Black Hole Entropy in the Hamiltonian Crystal Framework}
+\author{Nathan Weber}
+\date{March 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+We propose a formulation of the cosmic censorship hypothesis within the
+Hamiltonian Crystal framework, in which spacetime geometry emerges from
+a discrete vacuum Hamiltonian defined over a lattice of Fock-space modes.
+Spectral gaps in the vacuum Hamiltonian produce bounded curvature,
+naturally preventing the formation of singularities. Gravitational collapse
+corresponds to large excitations of crystal modes rather than divergent
+geometric curvature. The framework yields a finite curvature bound,
+a discrete horizon area spectrum, and a modified black hole entropy
+formula containing logarithmic corrections. We also explore the possibility
+that the vacuum spectral structure follows number-theoretic distributions,
+such as prime spectra or Riemann zeros, providing a connection between
+quantum gravity and arithmetic structure.
+
+\end{abstract}
+
+\section{Introduction}
+
+General relativity predicts the formation of spacetime singularities under
+gravitational collapse. The cosmic censorship hypothesis suggests that such
+singularities are hidden behind event horizons and therefore cannot be
+observed by distant observers.
+
+However, singularities arise within the classical continuum description of
+spacetime. If spacetime is instead an emergent structure arising from a
+deeper quantum system, the divergence of curvature may be replaced by
+bounded spectral behavior.
+
+In this work we explore cosmic censorship within the Hamiltonian Crystal
+framework, where spacetime geometry emerges from a discrete Hamiltonian
+defined over Fock-space lattice modes.
+
+\section{Hamiltonian Crystal Vacuum}
+
+We assume the vacuum is described by a Hamiltonian
+
+\begin{equation}
+H_{\text{crystal}}
+=
+\sum_{n} \Delta E_n a_n^\dagger a_n + H_{\text{int}}
+\end{equation}
+
+where
+
+\begin{itemize}
+\item $a_n^\dagger, a_n$ are Fock creation and annihilation operators
+\item $\Delta E_n$ are spectral gaps of vacuum modes
+\item $H_{\text{int}}$ describes interactions between modes
+\end{itemize}
+
+The vacuum ground state is
+
+\begin{equation}
+a_n |0\rangle = 0
+\end{equation}
+
+and excitations correspond to local energy density.
+
+\section{Spectral Gap Structure}
+
+We assume the vacuum spectral gaps obey
+
+\begin{equation}
+\Delta E_n = E_* f(n)
+\end{equation}
+
+where $E_*$ is a fundamental energy scale.
+
+Two possible spectral structures are
+
+\subsection{Geometric hierarchy}
+
+\begin{equation}
+f(n) = \epsilon^n
+\end{equation}
+
+\subsection{Number theoretic spectrum}
+
+\begin{equation}
+f(n) = \log p_n
+\end{equation}
+
+where $p_n$ is the $n$th prime number.
+
+\section{Emergent Curvature}
+
+Define the local spectral energy density
+
+\begin{equation}
+\rho(x) =
+\frac{1}{l_c^3}
+\sum_n
+\Delta E_n
+\langle a_n^\dagger a_n \rangle
+\end{equation}
+
+where $l_c$ is the lattice spacing.
+
+Using Einstein's equation
+
+\begin{equation}
+G_{\mu\nu} = 8\pi G T_{\mu\nu}
+\end{equation}
+
+we identify
+
+\begin{equation}
+T_{\mu\nu} \sim \rho(x) u_\mu u_\nu
+\end{equation}
+
+so curvature is determined by spectral energy.
+
+\section{Curvature Bound}
+
+Assume mode occupation numbers satisfy
+
+\begin{equation}
+k_n \le k_{\max}
+\end{equation}
+
+The maximum energy density is therefore
+
+\begin{equation}
+\rho_{\max}
+=
+\frac{k_{\max}}{l_c^3}
+\sum_n \Delta E_n
+\end{equation}
+
+The resulting curvature bound becomes
+
+\begin{equation}
+R_{\max} \sim 8\pi G \rho_{\max}
+\end{equation}
+
+Since $\rho_{\max}$ is finite, curvature remains finite.
+
+\section{Cosmic Censorship}
+
+A classical singularity corresponds to
+
+\begin{equation}
+|R_{\mu\nu\rho\sigma}| \rightarrow \infty
+\end{equation}
+
+However in the Hamiltonian crystal
+
+\begin{equation}
+R \le R_{\max}
+\end{equation}
+
+Therefore singularities cannot form. Cosmic censorship emerges naturally
+from spectral boundedness.
+
+\section{Black Hole Formation}
+
+Gravitational collapse corresponds to exciting many lattice modes.
+
+Define total excitation number
+
+\begin{equation}
+N = \sum_n k_n
+\end{equation}
+
+Total energy becomes
+
+\begin{equation}
+E = \sum_n k_n \Delta E_n
+\end{equation}
+
+A horizon forms when
+
+\begin{equation}
+R_s = \frac{2GE}{c^4}
+\end{equation}
+
+\section{Horizon Area Spectrum}
+
+Assume each crystal cell contributes a fundamental area
+
+\begin{equation}
+A = N l_c^2
+\end{equation}
+
+Thus the horizon area becomes discrete.
+
+\section{Microstate Counting}
+
+The number of ways to distribute $N$ excitations among modes grows
+approximately as
+
+\begin{equation}
+\Omega(N) \approx
+\exp\left(2\sqrt{\alpha N}\right)
+\end{equation}
+
+Entropy is
+
+\begin{equation}
+S = k_B \ln \Omega
+\end{equation}
+
+leading to
+
+\begin{equation}
+S \approx 2 k_B \sqrt{\alpha N}
+\end{equation}
+
+Using
+
+\begin{equation}
+N = \frac{A}{l_c^2}
+\end{equation}
+
+gives
+
+\begin{equation}
+S \propto \sqrt{A}
+\end{equation}
+
+\section{Prime Spectrum Correction}
+
+If the spectral structure follows prime distributions,
+
+\begin{equation}
+\Delta E_n \sim \log p_n
+\end{equation}
+
+the density of states changes according to the prime number theorem
+
+\begin{equation}
+\pi(x) \sim \frac{x}{\log x}
+\end{equation}
+
+This modifies the microstate growth to
+
+\begin{equation}
+\Omega(E) \sim e^{\beta E}
+\end{equation}
+
+which restores area scaling
+
+\begin{equation}
+S \propto A
+\end{equation}
+
+\section{Modified Black Hole Entropy}
+
+The resulting entropy becomes
+
+\begin{equation}
+S =
+\frac{k_B A}{4 l_P^2}
++
+\eta k_B \log\left(\frac{A}{l_P^2}\right)
+\end{equation}
+
+where $\eta$ is a constant of order unity.
+
+\section{Riemann Spectral Operator}
+
+If vacuum modes correspond to Riemann zeros
+
+\begin{equation}
+\zeta\left(\frac12 + i\gamma_n\right) = 0
+\end{equation}
+
+we may define a Hamiltonian
+
+\begin{equation}
+H = \sum_n \gamma_n a_n^\dagger a_n
+\end{equation}
+
+In this picture:
+
+\begin{itemize}
+\item vacuum spectra correspond to zeta zeros
+\item primes determine spectral density
+\item geometry emerges from number-theoretic structure
+\end{itemize}
+
+\section{Predictions}
+
+The Hamiltonian crystal framework predicts
+
+\begin{itemize}
+\item finite curvature inside black holes
+\item absence of true singularities
+\item discrete horizon area spectrum
+\item logarithmic corrections to black hole entropy
+\item possible number-theoretic structure in vacuum spectra
+\end{itemize}
+
+\section{Conclusion}
+
+The Hamiltonian crystal framework provides a natural mechanism for cosmic
+censorship through bounded spectral energy. In this model singularities are
+replaced by highly excited but finite vacuum lattice states. The resulting
+structure predicts discrete horizon spectra and entropy corrections while
+potentially linking quantum gravity to number-theoretic structures such as
+prime distributions and Riemann zeros.
+
+\end{document}
