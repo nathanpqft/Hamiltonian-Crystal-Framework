@@ -1,0 +1,287 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,geometry}
+\geometry{margin=1in}
+
+\title{Cosmological Constant from Vacuum Spectral Density in the Hamiltonian Crystal Framework}
+\author{Nathan Weber}
+\date{March 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We derive an expression for the cosmological constant arising from the
+spectral density of a discrete quantum vacuum described by a Hamiltonian
+crystal. In this framework spacetime emerges from a lattice of quantum
+modes whose spectral gaps determine the vacuum energy density. The
+cosmological constant is shown to be directly proportional to the
+integrated spectral density of the vacuum Hamiltonian. Possible
+extensions involving hierarchical spectra, prime distributions, and
+Riemann-zero spectra are discussed.
+\end{abstract}
+
+\section{Quantum Vacuum Hamiltonian}
+
+We assume spacetime emerges from a discrete quantum system with vacuum
+modes labeled by $n$. The fundamental Hamiltonian is
+
+\begin{equation}
+H_{\mathrm{crystal}}
+=
+\sum_{n} \Delta E_n \, a_n^\dagger a_n
++
+H_{\mathrm{int}}
+\end{equation}
+
+where
+
+\begin{itemize}
+\item $a_n^\dagger, a_n$ are creation and annihilation operators,
+\item $\Delta E_n$ are spectral gaps,
+\item $H_{\mathrm{int}}$ represents interactions between modes.
+\end{itemize}
+
+The vacuum lattice has characteristic spacing
+
+\begin{equation}
+l_c
+\end{equation}
+
+which defines the fundamental cell volume.
+
+\section{Vacuum Ground State}
+
+The vacuum satisfies
+
+\begin{equation}
+a_n |0\rangle = 0
+\end{equation}
+
+However each quantum oscillator contributes zero-point energy
+
+\begin{equation}
+E_{0,n} = \frac{1}{2} \Delta E_n .
+\end{equation}
+
+Thus the total vacuum energy becomes
+
+\begin{equation}
+E_0 =
+\sum_n \frac{1}{2}\Delta E_n .
+\end{equation}
+
+\section{Vacuum Energy Density}
+
+If a lattice cell has volume
+
+\begin{equation}
+V_c = l_c^3
+\end{equation}
+
+then the vacuum energy density is
+
+\begin{equation}
+\rho_{\mathrm{vac}}
+=
+\frac{E_0}{V_c}
+=
+\frac{1}{2l_c^3}
+\sum_n \Delta E_n .
+\end{equation}
+
+\section{Einstein Equation with Cosmological Constant}
+
+The Einstein field equation including a cosmological constant is
+
+\begin{equation}
+R_{\mu\nu}
+-
+\frac{1}{2}R g_{\mu\nu}
++
+\Lambda g_{\mu\nu}
+=
+8\pi G T_{\mu\nu}.
+\end{equation}
+
+Vacuum energy behaves like a stress-energy tensor
+
+\begin{equation}
+T_{\mu\nu}^{(\mathrm{vac})}
+=
+-\rho_{\mathrm{vac}} g_{\mu\nu}.
+\end{equation}
+
+Thus the cosmological constant satisfies
+
+\begin{equation}
+\Lambda = 8\pi G \rho_{\mathrm{vac}}.
+\end{equation}
+
+\section{Hamiltonian Crystal Expression}
+
+Substituting the vacuum density yields
+
+\begin{equation}
+\Lambda
+=
+8\pi G
+\left(
+\frac{1}{2l_c^3}
+\sum_n \Delta E_n
+\right).
+\end{equation}
+
+Simplifying,
+
+\begin{equation}
+\boxed{
+\Lambda
+=
+\frac{4\pi G}{l_c^3}
+\sum_n \Delta E_n
+}
+\end{equation}
+
+which expresses the cosmological constant directly in terms of the
+vacuum spectral gaps.
+
+\section{Spectral Density Formulation}
+
+Define the spectral density
+
+\begin{equation}
+g(E) = \sum_n \delta(E-\Delta E_n).
+\end{equation}
+
+Then
+
+\begin{equation}
+\sum_n \Delta E_n
+=
+\int_0^\infty E\,g(E)\,dE.
+\end{equation}
+
+The cosmological constant becomes
+
+\begin{equation}
+\boxed{
+\Lambda
+=
+\frac{4\pi G}{l_c^3}
+\int_0^\infty E\,g(E)\,dE
+}
+\end{equation}
+
+showing that dark energy is determined by the vacuum spectral
+distribution.
+
+\section{Hierarchical Spectral Model}
+
+Suppose the spectral gaps follow
+
+\begin{equation}
+\Delta E_n = E_* \epsilon^n
+\end{equation}
+
+with $0<\epsilon\ll1$.
+
+Then
+
+\begin{equation}
+\sum_{n=0}^{\infty} \Delta E_n
+=
+E_* \sum_{n=0}^{\infty} \epsilon^n
+=
+\frac{E_*}{1-\epsilon}.
+\end{equation}
+
+For small $\epsilon$ this naturally suppresses the vacuum energy.
+
+\section{Time-Dependent Vacuum}
+
+If the vacuum modes are periodically driven,
+
+\begin{equation}
+V(t)
+=
+\sum_n \delta_n a_n^\dagger a_n \cos(\omega t),
+\end{equation}
+
+then
+
+\begin{equation}
+H(t) = H_{\mathrm{crystal}} + V(t).
+\end{equation}
+
+The vacuum energy density becomes
+
+\begin{equation}
+\rho_{\mathrm{vac}}(t)
+=
+\rho_0
++
+\Delta\rho \cos(\omega t).
+\end{equation}
+
+Thus
+
+\begin{equation}
+\Lambda(t)
+=
+\Lambda_0
++
+\Delta\Lambda \cos(\omega t).
+\end{equation}
+
+\section{Prime Spectrum Extension}
+
+If spectral gaps follow prime numbers,
+
+\begin{equation}
+\Delta E_n = \alpha \log p_n
+\end{equation}
+
+where $p_n$ is the $n$th prime, then the prime number theorem
+
+\begin{equation}
+\pi(x) \sim \frac{x}{\log x}
+\end{equation}
+
+implies controlled growth of the vacuum spectral sum.
+
+\section{Riemann-Zero Spectrum}
+
+If spectral gaps correspond to the imaginary parts of zeros of the
+Riemann zeta function,
+
+\begin{equation}
+\zeta\left(\frac{1}{2}+i\gamma_n\right)=0
+\end{equation}
+
+then
+
+\begin{equation}
+\Delta E_n = \gamma_n
+\end{equation}
+
+and the vacuum energy becomes
+
+\begin{equation}
+\rho_{\mathrm{vac}}
+=
+\frac{1}{2l_c^3}
+\sum_n \gamma_n .
+\end{equation}
+
+\section{Conclusion}
+
+The Hamiltonian crystal framework provides a direct link between the
+cosmological constant and the spectral density of the vacuum Hamiltonian.
+In this picture dark energy arises from the residual zero-point energy
+of discrete vacuum modes. Extensions involving hierarchical spectra,
+prime-number distributions, and Riemann-zero spectra suggest deep
+connections between cosmology, quantum theory, and number theory.
+
+\end{document}
