@@ -1,0 +1,122 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb, amsfonts, bm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{makecell} % for wrapping text and math in table cells
+\geometry{margin=1in}
+
+\title{\textbf{Comprehensive Testable Observations of the Hamiltonian Crystal}}
+\author{Nathan Weber}
+\date{March 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Overview}
+This document summarizes \textbf{testable predictions} of the \textbf{Hamiltonian Crystal framework}, including experimental and high-energy physics contexts. Observables are categorized as:
+
+\begin{itemize}
+    \item \textbf{Actionable Today:} Measurable with current experimental setups.  
+    \item \textbf{For Future Research:} Requires advanced instrumentation, high-energy systems, or exotic quantum simulators.
+\end{itemize}
+
+The system is defined by the Hamiltonian
+\[
+H = \sum_{p \in \mathbb{P}} \omega_p N_p, \quad \omega_p = \log p, \quad N_p = a_p^\dagger a_p,
+\]
+with \textbf{prime orbit lengths}:
+\[
+L_{p,n} = n \log p, \quad n \in \mathbb{Z}^+.
+\]
+
+\section*{\textbf{Actionable Today}}
+
+\begin{center}
+\begin{tabular}{@{}p{3.5cm} p{4cm} p{3cm} p{3.5cm} p{3cm}@{}}
+\toprule
+\textbf{Observation} & \textbf{Mathematical Form} & \textbf{Numerical Example} & \textbf{Experimental Apparatus} & \textbf{Expected Result} \\
+\midrule
+
+\textbf{Vacuum Energy Oscillations} & 
+$\Lambda(t) = \Lambda_0 + \sum_i \Delta \Lambda_i \cos(\omega_i t + \phi_i)$ & 
+\makecell[l]{$\omega_2 = 0.6931$ \\ $\omega_3 = 1.0986$} & 
+High-Q cavities, Casimir plates, superconducting microwave cavities & 
+Oscillatory modulation of vacuum energy detectable as tiny shifts in cavity resonance or Casimir forces. \\
+
+\textbf{Integer-Spaced Fock Peaks} & 
+$E_n = \sum_p k_p \hbar \omega_p$ & 
+\makecell[l]{$E_1 = \hbar \log 2$ \\ $E_2 = \hbar (\log 2 + \log 3)$} & 
+Trapped ions, cavity QED, optical lattices & 
+Discrete energy peaks corresponding to prime excitations; detectable in single-excitation spectroscopy. \\
+
+\textbf{Topologically Protected Gaps} & 
+$C = \frac{1}{2\pi} \int F_{ij} dS$ & 
+\makecell[l]{$C = 1$ \\ $C = 2$} & 
+Photonic lattices, cold-atom optical lattices, superconducting qubit arrays & 
+Energy gaps remain stable under smooth perturbations; observed as invariant band gaps in measured spectra. \\
+
+\textbf{Spectral Density Oscillations} & 
+$d(E) = \bar d(E) + \sum_{p,n} \frac{\log p}{p^{n/2}} \cos(E L_{p,n})$ & 
+\makecell[l]{First 3 primes, $n=1$: \\ $0.6931/\sqrt{2}$ \\ $1.0986/\sqrt{3}$ \\ $1.6094/\sqrt{5}$} & 
+Optical lattice simulators, cavity QED, photonic crystals & 
+Oscillatory energy density peaks appear at $E \sim L_{p,n}^{-1}$, confirming prime-orbit mapping. \\
+
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{\textbf{Future Research (High-Energy / HEP Contexts)}}
+
+\begin{center}
+\begin{tabular}{@{}p{3.5cm} p{4cm} p{3cm} p{3.5cm} p{3cm}@{}}
+\toprule
+\textbf{Observation} & \textbf{Mathematical Form} & \textbf{Numerical / Energy Scale} & \textbf{Experimental Apparatus} & \textbf{Expected Result} \\
+\midrule
+
+\textbf{High-Energy Vacuum Oscillations} & 
+$\Lambda_{\rm HE}(t) = \sum_p \Delta E_p \cos(E t / \hbar)$ & 
+\makecell[l]{$\Delta E_p \sim \hbar \log p \times 10^{3-6}$ eV} & 
+Particle accelerators, high-intensity lasers, strong-field cavities & 
+Energy modulations at high-energy scales; could produce detectable shifts in vacuum polarization or particle propagation. \\
+
+\textbf{Fock-State Correlations in HEP} & 
+$\langle N_p N_q\rangle - \langle N_p\rangle\langle N_q\rangle \neq 0$ & 
+\makecell[l]{$p=2,3$ \\ $\langle N_2 N_3\rangle \sim 0.01 - 0.1$} & 
+High-resolution collider detectors, jet substructure analysis & 
+Integer-spaced correlations in particle counts; may appear in energy correlations or multiplicity distributions. \\
+
+\textbf{Riemann Zero Resonances} & 
+$\mathcal S(E)=0 \implies \zeta(1/2+iE)=0$ & 
+\makecell[l]{$\gamma_1 \approx 14.1347$ \\ $\gamma_2 \approx 21.0220$} & 
+Resonant scattering, precision energy spectroscopy at HEP scales & 
+Energy levels corresponding to nontrivial Riemann zeros; can be statistically tested against observed spectral peaks. \\
+
+\textbf{Topological Gap Stability at High Energy} & 
+$C = \frac{1}{2\pi} \int F_{ij} dS$ & 
+\makecell[l]{$C = 1-5$} & 
+Quantum simulators with high effective field scales & 
+Gaps remain invariant under high-energy perturbations; can be mapped via effective Hamiltonians in simulated systems. \\
+
+\textbf{Coupling to Standard Model Constants} & 
+$E = \kappa \hbar \omega_c$, $\kappa \sim \{\alpha, \alpha_s, \alpha_W, \alpha_G\}$ & 
+\makecell[l]{$\kappa \sim 0.1-1$} & 
+Precision measurements in Casimir setups, cavity QED, or high-energy experiments & 
+Connects dimensionless constants to measurable energy levels; deviations may reveal new physics. \\
+
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{Notes:}  
+\begin{itemize}
+    \item Frequencies $\omega_p = \log p$ are naturally scaled and can be adjusted with system-specific couplings.  
+    \item Fock-state correlations may be observed in particle multiplicities or high-precision timing experiments.  
+    \item The Riemann-zero correspondence offers a statistical test linking number theory to quantum spectra.  
+    \item High-energy topological gap tests require simulated Hamiltonians or extreme-field quantum optics setups.  
+    \item Coupling to Standard Model constants provides a bridge between prime-based Hamiltonian predictions and measurable fundamental physics parameters.
+\end{itemize}
+
+\end{document}
